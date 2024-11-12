@@ -1,0 +1,94 @@
+.container {
+    /* Apply a diagonal gradient background to the container */
+    background: linear-gradient(135deg, rgb(236, 177, 67), rgb(234, 135, 56));
+    padding-bottom: 20px;
+    min-height: 100vh; /* Ensures the container takes at least the full height of the screen */
+    font-family: 'Arial', sans-serif;
+}
+
+.headName {
+    /* Style for the main heading text */
+    color: rgb(34, 34, 97);
+    text-align: center; /* Center-aligns the text */
+    padding-top: 20px;
+    font-size: 36px;
+    font-weight: bold; /* Makes the text bold */
+}
+
+#msg {
+    /* Message style for when no recipes are found or on error */
+    text-align: center;
+    color: red; /* Makes the message text red */
+    display: none; /* Hidden by default */
+    margin-bottom: 20px;
+}
+
+#items {
+    /* Style for the main recipe items container */
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap onto the next line */
+    gap: 15px; /* Adds space between items */
+    justify-content: center; /* Center-aligns items horizontally */
+}
+
+.singleItem {
+    /* Styling for individual recipe items */
+    cursor: pointer; /* Makes the items clickable */
+}
+
+.card {
+    /* Styling for each card containing recipe details */
+    width: 18rem;
+    border-radius: 15px; /* Rounds the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for scale effect */
+}
+
+.card:hover {
+    /* Hover effect for cards */
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+}
+
+.card-img-top {
+    /* Style for the image at the top of the card */
+    border-radius: 15px 15px 0 0; /* Rounds the top corners */
+    object-fit: cover; /* Ensures the image covers the space without distortion */
+    height: 200px; /* Fixed height for the image */
+}
+
+.card-body {
+    /* Style for the body of the card */
+    background-color: #fff; /* White background for the card body */
+    padding: 20px;
+}
+
+.card-body .btn {
+    /* Style for the buttons inside the card */
+    width: 100%; /* Makes the buttons take the full width of the card */
+    margin-top: 10px; /* Adds space above the buttons */
+}
+
+#suggestions {
+    /* Styling for the auto-suggest dropdown */
+    position: absolute;
+    z-index: 10; /* Ensures suggestions are above other content */
+    width: 100%; /* Makes the dropdown take full width */
+}
+
+#favorites {
+    /* Styling for the favorites section */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* Center-aligns the favorite items */
+    margin-top: 50px; /* Adds space above the section */
+}
+
+#randomRecipes {
+    /* Styling for the random recipes section */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center; /* Center-aligns the random recipes */
+    margin-top: 50px; /* Adds space above the section */
+}
