@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css"> <!-- Link to the external CSS file for styling -->
+    <title>Movie App</title> <!-- The title that appears on the browser tab -->
+</head>
+<body>
+    <header> <!-- The header section of the page -->
+        <form id="form">
+            <input type="text" placeholder="Search" id="search" class="search"> <!-- The search bar for looking up movies -->
+        </form>
+        <button id="open-watchlist" class="watchlist-button">Список просмотра</button> <!-- Button to open the watchlist -->
+        <select id="sort-by" class="sort-select"> <!-- Dropdown to select how to sort the movies -->
+            <option value="popularity.desc">По популярности</option> <!-- Sort by popularity -->
+            <option value="release_date.desc">По дате выхода</option> <!-- Sort by release date -->
+            <option value="vote_average.desc">По рейтингу</option> <!-- Sort by rating -->
+        </select>
+    </header>
+    
+    <div id="tags"></div> <!-- This section will hold any dynamic tags or genres related to the movies -->
+    <main id="main"></main> <!-- The main content area where the movies will be displayed -->
+    
+    <div id="pagination"> <!-- Pagination controls to navigate between movie pages -->
+        <button id="prev-page" class="page-button">« Предыдущая</button> <!-- Button to go to the previous page -->
+        <button id="next-page" class="page-button">Следующая »</button> <!-- Button to go to the next page -->
+    </div>
+    
+    <!-- Movie Modal: This will show more details when a movie is selected -->
+    <div id="movie-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span> <!-- Close button for the movie details modal -->
+            <div id="movie-details"></div> <!-- This will display the detailed information for the selected movie -->
+        </div>
+    </div>
+    
+    <!-- Watchlist Modal: This shows the user's saved movies -->
+    <div id="watchlist-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-watchlist-modal" class="close">&times;</span> <!-- Close button for the watchlist modal -->
+            <h2>Список просмотра</h2> <!-- Title for the watchlist modal -->
+            <div id="watchlist" class="watchlist"></div> <!-- This will show the list of movies in the user's watchlist -->
+        </div>
+    </div>
+    
+    <script src="script.js"></script> <!-- Link to the JavaScript file that adds functionality to the page -->
+</body>
+</html>
