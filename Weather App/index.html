@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic metadata and linking the CSS file -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Main container for the weather app -->
+    <div id="weather-container">
+        <h2>Weather App</h2>
+        
+        <!-- Input field for city search, with autocomplete suggestions -->
+        <input type="text" id="city" placeholder="Enter city" oninput="fetchCitySuggestions()">
+        
+        <!-- Container for the search and location buttons -->
+        <div id="button-container">
+            <button onclick="getWeather()">Search</button>
+            <button onclick="getCurrentLocationWeather()">Use Current Location</button>
+        </div>
+        
+        <!-- Toggle switch for temperature units (Celsius/Fahrenheit) -->
+        <label>
+            <input type="checkbox" id="unit-toggle" onclick="toggleUnit()"> Fahrenheit
+        </label>
+        
+        <!-- Weather icon, hidden by default, shown only when data is available -->
+        <img id="weather-icon" alt="Weather Icon" style="display: none;">
+        
+        <!-- Div for displaying the temperature -->
+        <div id="temp-div"></div>
+        
+        <!-- Div for main weather information -->
+        <div id="weather-info"></div>
+        
+        <!-- Div for displaying the multi-day weather forecast -->
+        <div id="forecast"></div>
+        
+        <!-- List for autocomplete city suggestions -->
+        <ul id="suggestions-list"></ul>
+    </div>
+    
+    <!-- Link to the JavaScript file that handles the app’s logic -->
+    <script src="./script.js"></script>
+</body>
+</html>

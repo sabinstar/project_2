@@ -1,0 +1,176 @@
+/* Background for the entire page */
+body {
+    background: #1A1A2E; /* Dark background color */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+    opacity: 0; /* Initial transparency */
+    animation: fadeIn 1s forwards; /* Smooth fade-in animation for the page */
+}
+
+/* Animation for smooth fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#weather-container {
+    background: rgba(255, 255, 255, 0.1); /* Slight transparency for a glass effect */
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Blurs background elements */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #ffffff;
+    max-height: 90vh; /* Limits container height */
+    overflow-y: auto; /* Adds a scroll for overflow content */
+    opacity: 0;
+    animation: fadeIn 1.5s forwards; /* Smooth appearance of container */
+}
+
+/* Styling for headings and labels */
+h2, h3, label, p {
+    color: #ffffff; /* White for good contrast */
+    margin: 8px 0;
+    opacity: 0;
+    animation: fadeIn 1s forwards 0.5s; /* Smooth fade-in with slight delay */
+}
+
+/* Styling for the text input */
+input[type="text"] {
+    width: calc(100% - 16px); /* Full width minus padding */
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+    color: #ffffff;
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1s; /* Fade-in with delay */
+}
+
+/* Container for the buttons */
+#button-container {
+    display: flex;
+    justify-content: space-between; /* Space out buttons evenly */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 1.5s; /* Fade-in effect with delay */
+}
+
+/* Styling for the buttons */
+button {
+    background: #4834d4; /* Primary button color */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%; /* Consistent button width */
+    font-size: 15px;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth background change and scale effect */
+    flex: 1;
+}
+
+/* Hover effect for buttons */
+button:hover {
+    background: #341f97; /* Darker shade on hover */
+    transform: scale(1.05); /* Slight enlargement */
+}
+
+/* Temperature display */
+#temp-div p {
+    font-size: 60px;
+    margin: -20px 0 10px;
+    color: #ffffff;
+    opacity: 0;
+    animation: fadeIn 1s forwards 2s; /* Delayed fade-in for temperature */
+}
+
+/* Weather information display */
+#weather-info {
+    font-size: 18px;
+    color: #b8b8d1;
+    opacity: 0;
+    animation: fadeIn 1s forwards 2.5s; /* Delayed fade-in for weather info */
+}
+
+/* Weather icon styling */
+#weather-icon {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto;
+    display: block;
+    opacity: 0;
+    animation: weatherIconZoom 1s forwards 3s; /* Smooth zoom-in effect */
+}
+
+/* Zoom animation for the weather icon */
+@keyframes weatherIconZoom {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Styling for the multi-day forecast */
+#forecast {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    opacity: 0;
+    animation: fadeIn 1s forwards 3.5s; /* Smooth fade-in for forecast */
+}
+
+.forecast-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1); /* Light transparency for a layered effect */
+}
+
+/* Styling for city suggestions list */
+#suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 10px;
+    max-height: 200px; /* Limits height of suggestions */
+    overflow-y: auto; /* Adds scroll for overflow content */
+    opacity: 0;
+    animation: fadeIn 1s forwards 4s; /* Smooth fade-in with delay */
+}
+
+#suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#suggestions-list li:hover {
+    background-color: rgba(255, 255, 255, 0.3); /* Highlights item on hover */
+}
+
+/* Smooth background change on button press */
+button:active {
+    transform: scale(0.98); /* Slight button shrink on press */
+}
